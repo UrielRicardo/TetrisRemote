@@ -1,0 +1,24 @@
+body      { font-family: Helvetica, sans-serif; background: #000;}
+#tetris   { margin: 1em auto; padding: 1em; }
+#stats    { display: none; vertical-align: top; }
+#canvas   { width: 100%; height: 100% ; position: absolute; top: 0; left: 0; }
+#menu     { position: absolute; left: 20px; top: 20px; }
+#menu p   { margin: 0.5em 0; text-align: center; }
+#menu p a { text-decoration: none; color: black; }
+#upcoming { display: block; margin: 0 auto; }
+#score    { color: red; font-weight: bold; vertical-align: middle; }
+#rows     { color: blue; font-weight: bold; vertical-align: middle; }
+#stats    { position: absolute; bottom: 0em; right: 1em; }
+
+.popup-wrapper {
+    width: 100%;
+    padding-top: 200px;
+}
+
+.popup {
+    width: 500px;
+    height: 350px;
+    margin: auto;
+    padding: 20px;
+    background: #efefef;
+}

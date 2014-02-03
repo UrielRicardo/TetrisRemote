@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+	  <title>Tetris</title>
+
+	  <link rel="stylesheet" href="{{ asset('bundles/tetrisapi/css/main.css') }}" media="screen"/>
+	</head> 
+
+	<body>
+
+		<div class="start">
+			<input type="text" id="input-code"/>
+			<button class="submit-code" value="Valider">Valider</button>
+		</div>
+
+		<div class="controls" style="display: none;">
+			<button onclick="Api.send('api.controls.start')">Start</button>
+			<button onclick="Api.send('api.controls.left')">Left</button>
+			<button onclick="Api.send('api.controls.right')">Right</button>
+			<button onclick="Api.send('api.controls.rotate')">Rotate</button>
+			<button onclick="Api.send('api.controls.down')">Down</button>
+		</div>
+
+		<script src="{{ asset('bundles/tetrisapi/js/stats.js') }}"></script>
+	  <script src="{{ asset('bundles/tetrisapi/js/mobile-api.js') }}"></script>
+	  <script src="{{ asset('bundles/tetrisapi/js/api-messages-types.js') }}"></script>
+	  <script>
+
+	  	document
+	  		.querySelectorAll('.submit-code')[0]
+	  		.addEventListener('click', function () {
+			  	 Api.beginConnection(function () {
+
+			  	 	var code = document.getElementById('input-code').value
+
+			        Api.send(ASSOCIATE_WITH_CODE, {"code":code})
+
+			        document.querySelectorAll('.controls')[0].style.display = 'block'
+			    })
+			})
+
+	  </script>
+	</body>
+</html>

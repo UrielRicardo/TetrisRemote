@@ -1,0 +1,4 @@
+tetris_api:
+    resource: "@TetrisApiBundle/Controller/"
+    type:     annotation
+    prefix:   /
