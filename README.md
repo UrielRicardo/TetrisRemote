@@ -1,4 +1,5 @@
-OsirisWeb
-=========
 
-A multimedia web and mobile application that gives an enhanced experience of movie watching
+TetrisRemote
+============
+
+A little experiment using websockets : play HTML5 tetris using your mobile phone as a remote control
